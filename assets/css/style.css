@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: #f4f3f3;
+    height: 7vh;
+    display: flex;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav .left-side {
+    flex: 50%;
+    padding-left: 90px;
+}
+
+nav .right-side {
+    flex: 50%;
+    justify-content: flex-end;
+    padding-right: 90px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: black;
+    font-weight: 700;
+}
+
+nav .right-side a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.personal {
+    height: 93vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-content {
+    flex-direction: row;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgb(79, 79, 79);
+}
+
+.container-content .left {
+    flex: 40%;
+}
+
+.container-content .right {
+    flex: 60%;
+}
+
+.container-content .skills {
+    display: flex;
+}
+
+.container-content .sosmed i {
+    font-size: 40px;
+}
+
+.card{
+    width: 27%;
+    display: inline-block;
+    border: 10px solid wheat;
+    box-shadow: 2px 2px 20px whitesmoke;
+    border-radius: 15px; 
+    margin: 2%;
+    justify-items: center;
+    margin-top: 50px;
+    padding-top: 50px;
+   }

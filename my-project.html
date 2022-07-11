@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Create Project</title>
+</head>
+
+<body style="background-color: honeydew;">
+
+    <nav>
+        <div class="left-side">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <a class="active" href="index.html">Home </a>
+                </li>
+                <li>
+                    <a href="my-project.html">Add Project</a>
+                </li>
+                <li>
+                    <a href="project-detail.html">My Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <a href="contact-me.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <div style="
+background-color: #c4c4c4;">
+        <h1 style="
+    margin: auto;
+    text-align: center;
+    ">ADD PROJECT</h1>
+        <div style="
+        margin: auto;
+        width: 650px;
+        margin-top: 50px;">
+            <div class="project">
+                <div class="project-form">
+                    <form onsubmit="addProject(event)">
+                        <div style="
+                        padding: 10px;">
+                            <label for="input-project-name">Project name</label><br>
+                            <input type="text" id="input-project-name" style="width: 100%;" />
+                        </div>
+
+                        <div style="
+                        padding: 10px;">
+                            <label for="input-start-date" style="margin-right: 240px;">Start Date</label>
+                            <label for="input-end-date">End Date</label>
+                        </div>
+
+                        <div style="
+                        padding: 10px;">
+                            <input type="date" id="input-start-date" style="width: 305px;" />
+                            <input type="date" id="input-end-date" style="width: 305px; margin-left: 5px;" />
+                        </div>
+
+                        <div style="
+                        padding: 10px;">
+                            <label for="description">Description</label>
+                            <textarea id="description" cols="30" rows="10" style="
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding: 8px;
+                            border: 1px solid black;
+                            border-radius: 8px;
+                            margin-top: 5px;
+                            resize: none;
+                            height: 100px;"></textarea>
+                        </div>
+
+                        <div style="
+                        padding: 10px;">
+                            <label for="technologies">library</label><br>
+                            <input type="checkbox" id="node" name="library" value="nodejs" />
+                            <label for="library1"> Node - JS</label>
+                            <input type="checkbox" id="next" name="library" value="nextjs" />
+                            <label for="library2"> Next - JS</label><br>
+                            <input type="checkbox" id="react" name="library" value="reactsj" />
+                            <label for="library3"> React - JS</label>
+                            <input type="checkbox" id="type" name="library" value="typescript" />
+                            <label for="library4"> Typescript</label><br>
+                        </div>
+
+                        <div style="
+                        padding: 10px;">
+                            <label for="input-project-image">Upload Image</label><br>
+                            <input type="file" id="input-project-image">
+                        </div>
+
+                        <div class="button-group" style="padding: 10px; margin-top: 10px;">
+                            <button type="submit">Add Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h1 style="
+text-align: center;
+margin-top: 100px;">
+        MY PROJECT</h1>
+        <div id="contents" class="project-list">
+                <div class="card">
+                    <div class="contents">
+                        <div class="project-content">
+                            <h1>
+                                <a href="project-detail.html" target="_blank">Vanitas Vanitatum et omnia Vanitas</a>
+                            </h1>
+                            <div class="project-image">
+                                <img src="assets/images/profil.jpeg" alt="" style="width: 400px; padding: 5px;">
+                            </div>
+                            <span style="font-size: 15px; color: grey;">1 hour ago</span>
+                            <div class="detail-project-content">
+                                07 Juli 2022 17:00 WIB | Black Suit
+                            </div>
+                            <p>
+                                Sefirot (/sfɪˈroʊt, ˈsfɪroʊt/; Hebrew: סְפִירוֹת səp̄īrōṯ), meaning emanations, are the 10
+                                attributes/emanations in Kabbalah, through which Ein Sof (The Infinite) reveals itself and
+                                continuously
+                                creates both the physical realm and the chain of higher metaphysical realms (Seder
+                                hishtalshelus). The
+                                term is alternatively transliterated into English as sephirot/sephiroth, singular
+                                sefirah/sephirah, etc.
+                            </p>
+                            <img src="assets/images/nodejs.png" alt="" width="45px" id="node"
+                                value="assets/images/nodejs.png">
+                            <img src="assets/images/nextjs.png" alt="" width="45px" id="next"
+                                value="assets/images/nextjs.png">
+                            <img src="assets/images/reactsj.png" alt="" width="45px" id="react"
+                                value="assets/images/reactsj.png">
+                            <img src="assets/images/typescript.png" alt="" width="45px" id="type"
+                                value="assets/images/typescript.png">
+                            <div style="text-align: right;">
+                                <div class="btn-group">
+                                    <button class="btn-edit">Edit Project</button>
+                                    <button class="btn-delete">Delete Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="assets/js/project.js"></script>
+</body>
+
+</html>
