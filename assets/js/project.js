@@ -128,7 +128,12 @@ function getDistanceTime(time) {
             return hourDistance + ' hour ago'
         } else {
             let minuteDistance = Math.floor(distance / (miliseconds * secondInMinutes))
+            if (minuteDistance > 0) {
             return minuteDistance + ' minute ago'
+        } else {
+            let secondDistance = Math.floor(distance / miliseconds)
+            return secondDistance + ' second ago'
+            }
         }
     }
 }
