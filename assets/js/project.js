@@ -75,7 +75,8 @@ function renderProjects() {
             ${getFullTime(projects[i].postedAt)} | Black Suit
             <br><br>
                 Project Start on "${projects[i].start}"<br>
-                Project End on "${projects[i].end}"
+                Project End on "${projects[i].end}"<br><br>
+                Project time left : ${getDuration(projects[i].start, projects[i].end)}
             </div>
             <p>
                 ${projects[i].description}
@@ -136,6 +137,43 @@ function getDistanceTime(time) {
             }
         }
     }
+}
+
+function getDuration(start, end) {
+    let projectStart = new Date(start)
+    let projectEnd = new Date(end)
+
+    let duration = projectEnd - projectStart
+
+    let monthDuration = Math.floor(duration / (30 * 24 * 60 * 60 * 1000))
+    if (monthDuration > 0) {
+        return monthDuration + ' month left'
+    } else {
+        let weekDuration = Math.floor(duration / (7 * 24 * 60 * 60 * 1000))
+        if (weekDuration > 0) {
+            return weekDuration + ' week left'
+        } else {
+            let dayDuration = Math.floor(duration / (24 * 60 * 60 * 1000))
+            if (dayDuration > 0) {
+                return dayDuration + ' day left'
+            } else {
+                let hourDuration = Math.floor(duration / (60 * 60 * 1000))
+                if (hourDuration > 0) {
+                    return hourDuration + ' hour left'
+                } else {
+                    let minuteDuration = Math.floor(duration / (60 * 1000))
+                    if (minuteDuration > 0) {
+                        return minuteDuration + ' minute left'
+                    } else {
+                        let secondDuration = Math.floor(duration / 1000)
+                        if (secondDuration > 0) {
+                            return secondDuration + ' second left'
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
 
 setInterval(function () {
